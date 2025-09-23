@@ -1,0 +1,697 @@
+/* ================================
+   GLOBAL STYLES
+=================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+body {
+    background-color: #f5f6fa; /* Light grey background */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* LINKS */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* ================================
+   NAVBAR
+=================================== */
+header {
+    width: 100%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    background-color: #5e70e4;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+}
+
+/* LOGO */
+.logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff; /* Blue accent */
+    transition: color 0.3s ease;
+}
+
+.logo a:hover {
+    color: #003f80;
+}
+
+/* NAV LINKS */
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links li a {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #ffffff;
+    padding-bottom: 4px;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+/* ACTIVE & HOVER STATES */
+.nav-links li a:hover,
+.nav-links li a.active {
+    color: #5ec2d3;
+    border-bottom: 2px solid #f53f16;
+}
+
+/* ================================
+   HAMBURGER MENU
+=================================== */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* ================================
+   SECTIONS
+=================================== */
+.section, .hero {
+    text-align: center;
+    padding: 1rem 1rem;
+    margin: 2rem auto;
+    max-width: 1400px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+
+}
+
+.section {
+    height: 100%;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    color: #1676dc;
+    margin-bottom: 1rem;
+}
+.hero {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+
+.hero-left, .hero-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-left {
+    background-color: #0d0936;
+    max-width: 500px;
+}
+
+.hero-left .hero-img {
+    width: 500px;
+    height: 700px;
+    border-radius: 0%;
+    object-fit: cover;
+    
+    box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.2);
+}
+
+.hero-right {
+    /*background: #f9f9f9;*/
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero-right h1 {
+    font-size: 4rem;
+    color: #555;
+}
+
+.hero-right h1 span {
+    color: #0078ff; /* Highlighted name */
+}
+
+.hero-right .subtitle {
+    font-size: 1.7rem;
+    margin: 15px 0;
+    color: #555;
+}
+
+.hero-right .btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 22px 45px;
+    font-size: 1rem;
+    color: #fff;
+    background: #0078ff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.hero-right .btn:hover {
+    background: #005fcc;
+}
+
+.hero p, .section p, .section ul {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.section h2 {
+    color: #0056b3;
+    margin-bottom: 1rem;
+}
+
+.section ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    text-align: left;
+    display: inline-block;
+}
+/* ================================
+   About Section
+=================================== */
+.about-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1400px;
+    height: 90vh;
+    margin: 4rem auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.about-left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-left .about-img {
+    width: 360px;
+    height: 500px;
+    object-fit: cover;
+    /*border-radius: 10px;
+    border: 4px solid #0078ff;
+    box-shadow: 0px 6px 20px rgba(0,0,0,0.2);*/
+}
+
+.about-right {
+    flex: 2;
+    text-align: left;
+}
+
+.about-right h2 {
+    font-size: 2rem;
+    color: #0056b3;
+    margin-bottom: 1rem;
+}
+
+.about-right p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: #444;
+    line-height: 1.7;
+}
+.about-right p1 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: #0056b3;
+    line-height: 1.7;
+}
+/* ================================
+   Education Section
+=================================== */
+
+.education-section {
+    text-align: center;
+    padding: 2rem;
+    max-width: 1400px;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1400px;
+    height: 90vh;
+    margin: 4rem auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    
+}
+
+.education-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap; /* ensures it stacks on small screens */
+    margin-top: 2rem;
+}
+
+.education-card {
+    flex: 1;
+    min-width: 300px;
+    max-width: 700px;
+    height: 500px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.08);
+    text-align: left;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    position: relative;
+}
+/* School icon */
+.school-icon {
+    font-size: 3rem;
+    color: #0056b3;
+    position: absolute;
+    top: 20px;
+    left: 35px;
+}
+/* Bounce animation */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-15px);
+  }
+  60% {
+    transform: translateY(-7px);
+  }
+}
+
+.education-card:hover {
+  animation: bounce 0.6s;
+}
+
+.education-card h3 {
+    font-size: 1.5rem;
+    color: #0056b3;
+    text-align: right;
+    margin-bottom: 0.5rem;
+}
+
+.education-card p {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.education-card ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    color: #555;
+}
+
+.education-card ul li {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+/* ================================
+   Skills Section
+=================================== */
+
+.skills-section {
+    text-align: center;
+    padding: 2rem;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.skills-card {
+    width: 680px;
+    height: 550px;
+    perspective: 1000px;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.skills-card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Front & Back Faces */
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-front {
+  background: #282c69;
+}
+
+.card-front h3{
+    color: #e8e8e8;
+    font-size: 2.5rem;
+}
+
+.card-front .skill-icon{
+    color: #f4f4f4;
+    margin-right: 16px;
+    font-size: 3.1rem;
+}
+
+.card-back {
+  background: #fff;
+  transform: rotateY(180deg);
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Two-column grid inside back */
+.skills-grid {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.skills-col {
+  flex: 1;
+  min-width: 250px;
+}
+
+.skill-icon {
+  color: #0056b3;
+  margin-right: 8px;
+  font-size: 1.1rem;
+}
+
+.card-back p {
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.card-back ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  color: #555;
+}
+
+.card-back ul li {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+
+/* ================================
+   Contact Section
+=================================== */
+.contact-section {
+  max-width: 1400px;
+  margin: 4rem auto;
+  min-height: 650px;   
+  padding: 2rem;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  text-align: center;
+  
+
+}
+.contact-intro {
+  font-size: 1.4rem;   
+  line-height: 1.8;    
+  max-width: 900px;    
+  margin: 0 auto 2rem; 
+  font-weight: 500;    
+  color: #333;         
+}
+
+
+
+.contact-container {
+  display: flex;             
+  justify-content: space-between; 
+  align-items: center;        
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+  height: 100%; 
+  max-height: 800px;
+}
+
+
+.contact-info {
+  flex: 1;
+  min-width: 350px;
+  text-align: left;
+  margin-left: 10%;
+
+}
+
+.contact-form {
+  flex: 4;
+  min-width: 750px;
+  margin-top: 5%;
+
+  display: flex;
+  align-items: center;  
+  justify-content: flex-end;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  
+  max-width: 600px;
+}
+.contact-section h2 {
+    font-size: 2.2rem;
+}
+.contact-form input,
+.contact-form textarea {
+  padding: 1.1rem;
+  border: 1px solid #3613c1;
+  border-radius: 15px;
+  font-size: 1.2rem;
+  margin-left: 15px;
+}
+.contact-info p i {
+  
+  color: #0056b3;
+  margin-top: 1%;
+  margin-left: 15%;
+  font-size: 1.8rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-links a {
+  margin-left: 15%;
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 1.8rem;
+  color: #0056b3;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #003f80;
+}
+
+.contact-form button {
+  padding: 1.1rem;
+  background: #0056b3;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background 0.3s;
+}
+
+.contact-form button:hover {
+  background: #004099;
+}
+
+/*-----------------------------------------------------------*/
+
+* DARK MODE TOGGLE BUTTON */
+#dark-mode-toggle {
+  margin-left: 1rem;
+  padding: 0.5rem 0.8rem;
+  border: none;
+  border-radius: 6px;
+  background: #fff;
+  color: #333;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background 0.3s, color 0.3s;
+}
+
+#dark-mode-toggle:hover {
+  background: #ddd;
+}
+
+/* ================================
+   DARK MODE STYLES
+=================================== */
+body.dark-mode {
+  background-color: #121212;
+  color: #f5f5f5;
+}
+body.dark-mode section,
+body.dark-mode .hero {
+    background-color: #1e1e1e; /* card background */
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.05);
+}
+body.dark-mode .about-right p {
+    color: #6e6e6e;
+}
+body.dark-mode .education-card {
+    flex: 1;
+    background: #1e1e1e;
+    box-shadow: 0px 4px 12px rgba(255, 255, 255,0.08);
+}
+body.dark-mode .education-card ul {
+    color: #6e6e6e;
+}
+body.dark-mode .education-card p {
+    color: #d2d2d2;
+}
+body.dark-mode .card-back {
+  background: #1e1e1e;
+}
+body.dark-mode .card-back p {
+  
+  color: #d2d2d2;
+}
+
+body.dark-mode .card-back ul {
+  
+  color: #6e6e6e;
+}
+
+
+body.dark-mode header {
+  background-color: #1f1f1f;
+}
+
+body.dark-mode .logo a,
+body.dark-mode .nav-links li a {
+  color: #f5f5f5;
+}
+
+body.dark-mode .nav-links li a:hover,
+body.dark-mode .nav-links li a.active {
+  color: #5ec2d3;
+  border-bottom: 2px solid #f53f16;
+}
+
+
+
+/* ================================
+   RESPONSIVE DESIGN
+=================================== */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background-color: #fff;
+        width: 250px;
+        padding: 1.5rem;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        border-radius: 8px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .section, .hero {
+        padding: 4rem 1.5rem;
+        margin: 1.5rem auto;
+    }
+    .about-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-right {
+        text-align: center;
+    }
+
+    .about-left .about-img {
+        width: 250px;
+        height: 300px;
+    }
+}
